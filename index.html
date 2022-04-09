@@ -6,6 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome Bangla Avidhan</title>
+
+    <link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link href="https://fonts.googleapis.com/css2?family=Galada&family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap" rel="stylesheet">
     <style>
@@ -21,6 +39,10 @@
 
         .galada {
             font-family: 'Galada', cursive !important;
+        }
+
+        .lato {
+            font-family: lato;
         }
 
         h1,
@@ -49,18 +71,17 @@
         .logo-container {
             width: 30%;
             height: 100vh;
-            background-color: #7653bc;
+            background-color: #4B4453;
 
             display: grid;
             place-content: center;
 
-            font-size: 55px;
             text-align: center;
             color: #ffffff;
         }
 
         .logo {
-            width: 60%;
+            width: 35%;
             margin: 0 auto;
         }
 
@@ -71,6 +92,25 @@
 
         .social-share li {
             display: inline-block;
+            margin: 0px 10px;
+        }
+
+        .social_icon {
+            margin-top: 180px;
+        }
+
+        .social_icon h4 {
+            font-size: 25px;
+            font-weight: blod;
+            margin-bottom: 15px;
+        }
+
+        .copyright_text {
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            padding-bottom: 10px;
+            font-family: lato;
         }
 
         .content {
@@ -93,23 +133,41 @@
         <div class="logo-container">
             <img class="logo" src="images/logo-1.png" alt="logo.png">
             <h1 class="mT">অভিধান</h1>
-            <ul class="social-share">
-                <li><a href="#"><img class="icon" src="images/icons8-facebook-50.png" alt=""></a></li>
-                <li><a href="#"><img class="icon" src="images/icons8-twitter-50.png" alt=""></a></li>
-                <li><a href="#"><img class="icon" src="images/icons8-linkedin-50.png" alt=""></a></li>
-            </ul>
+            <div class="social_icon">
+                <h4 class="lato">Share On:</h4>
+                <ul class="social-share">
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//alazadheera.github.io/chrome-avidhan/"
+                            target="_blank">
+                            <img class="icon" src="images/icons8-facebook-50.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?text=https%3A//alazadheera.github.io/chrome-avidhan/"
+                            target="_blank">
+                            <img class="icon" src="images/icons8-twitter-50.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//alazadheera.github.io/chrome-avidhan/&title=Chrome%20Avidhan&summary=&source="
+                            target="_blank">
+                            <img class="icon" src="images/icons8-linkedin-50.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright_text">
+                <p>&copy;Al Azad Heera</p>
+            </div>
         </div>
         <div class="content text-center">
             <h1 class="mT">অভিধান</h1>
-            <p class="baloo" style="text-align: justify; font-size: 18px;"><span class="galada">অভিধান</span> একটি
-                অসাধারন টুল ইংরেজী
-                শব্দের বাংলা মানের খোজার জন্য।
-                আপনি মাত্র কয়েক ক্লিকেই যে কোন ওয়েব পেজ থেকে যে কোন ইংরেজী শব্দের বাংলা মানে বের করতে পারবেন। এর জন্য
-                আপনাকে
-                অন্য কোন পেজ গিয়ে মানে সার্চ করতে হবে না। <br><br> আপনি যে ইংরেজী শব্দের মানে জানতে চাচ্ছেন, সেই শব্দের
-                উপর
-                ডাবল ক্লিক করুন। এর পর মাউসে রাইট ক্লিক করে, কনটেক্সট মেনু থেকে "Avidhan" সিলেক্ট করুন। ব্যস! পরবর্তী
-                ডেক্সটপ নোটিফিকেশনে আপনি মানে পেয়ে যাবেন।</p>
+            <p class="baloo" style="text-align: justify; font-size: 19px;"><span class="galada">অভিধান</span> একটি
+                অসাধারন ক্রোম এক্সটেনশন ইংরেজী শব্দের বাংলা মানের খোজার জন্য। আপনি মাত্র কয়েক ক্লিকেই যে কোন ওয়েব পেজ
+                থেকে যে কোন ইংরেজী শব্দের বাংলা মানে বের করতে পারবেন। এর জন্য আপনাকে অন্য কোন পেজে গিয়ে মানে সার্চ করতে
+                হবে না। <br><br> আপনি যে ইংরেজী শব্দের মানে জানতে চাচ্ছেন, সেই শব্দের উপর ডাবল ক্লিক করুন। এর পর মাউসে
+                রাইট ক্লিক করে, কনটেক্সট মেনু থেকে "Avidhan" সিলেক্ট করুন। ব্যস! পরবর্তী ডেক্সটপ নোটিফিকেশনে আপনি আপনার
+                কাঙ্ক্ষিত ইংরেজী শব্দের বাংলা মানে পেয়ে যাবেন।</p>
         </div>
     </div>
 </body>
