@@ -125,6 +125,20 @@
 
             padding: 0px 80px;
         }
+
+        .language_button {
+            text-align: right;
+        }
+
+        .language_button ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+
+        .language_button li a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -161,13 +175,21 @@
             </div>
         </div>
         <div class="content text-center">
-            <h1 class="mT">অভিধান</h1>
-            <p class="baloo" style="text-align: justify; font-size: 19px;"><span class="galada">অভিধান</span> একটি
+            <div class="language_button">
+                <ul>
+                    <li><a id="banglaDesc" class="baloo" onclick="banglaDesc()" href="#"
+                            style="text-decoration: underline; font-weight: bold; color: #8C52FF;">বাংলা</a></li>
+                    <li><a id="englishDesc" class="lato" onclick="englishDesc()" href="#">English</a></li>
+                </ul>
+            </div>
+            <h1>অভিধান</h1>
+            <p id="desc" class="baloo" style="text-align: justify; font-size: 20px;"><span class="galada">অভিধান</span>
+                একটি
                 অসাধারন ক্রোম এক্সটেনশন ইংরেজী শব্দের বাংলা মানের খোজার জন্য। আপনি মাত্র কয়েক ক্লিকেই যে কোন ওয়েব পেজ
                 থেকে যে কোন ইংরেজী শব্দের বাংলা মানে বের করতে পারবেন। এর জন্য আপনাকে অন্য কোন পেজে গিয়ে মানে সার্চ করতে
                 হবে না। <br><br> আপনি যে ইংরেজী শব্দের মানে জানতে চাচ্ছেন, সেই শব্দের উপর ডাবল ক্লিক করুন। এর পর মাউসে
-                রাইট ক্লিক করে, কনটেক্সট মেনু থেকে <span style="background: #cdc7d4; padding: 0 5px; margin: 0;"><img
-                        src="data:image/png;base64,
+                রাইট ক্লিক করে, কনটেক্সট মেনু থেকে <span style="background: #cdc7d4; padding: 0 5px; margin: 0;">
+                    <img src="data:image/png;base64,
                         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJHSURBVDhPnZNNSFRRFMd/771RpxmJLNMpsQ9HI0rHj0KjCGlVC1sEFSREiz7cSFQYhdROglq0cbJNSFALEVvkJgOLWhQtKtNxREILtUnDCfoYU+fjve697zWpq+zHu++9e885/3fOefdq9TU3rFx3GaaVZDnouovorxDa2doeqzhvP0nTsfwjLh1Gph+jm1aClIXIYHlDxZgJhI6NYcDsN5iT4/vfZ3xG2DSZMiR+QnLOCXBwyZshjOHQOMdvRYlOxdFEgEQXL7Mxk56gSTKWzeGWGSbeZRIb3Inhtn2UgMgGzcxk175NGKyWS4s4chL6BvqoDOxmODBCRwNkOgKqBEs00L/Fx7mjXRwqb6Ol+Q5fohEuNQYp13qpK2oXwZUM9Y9wuSbJqnUqVqEEZH3hwQ+0dp5mY5nBlWunyM8t4HqwkZa7PkqKAsr5zZMYe2u3klrwx5WA7Kovbz2jH9/z49NKUqK7kvDgMAdPlDLNSzWPhESnRdGWrNnBLkEs5Oa5edg2SfuzY2w2Wtmu3aa7q1857ThgFzzwdB5DCPxpskQ1UaJnQX+Hn+nmMcatC86qzfmmMyT4ijejUDV8ISoDSSolvrSnkKaKON333hL5PEbvg1GuNnQq+4tHU2wozBebR03TpAVkWvNxqKguIXS/ipt1a3kV9OO1ipkjwujrJFlex3kBaQGJFJFfcGdDQZGHFWvEfKKKi6UeJp+XY4gyl6Lreoa9VZcMcSl1jxAr3pZDds5iu729M9Dqq8Vx9ojjbP7PcQ7xG8de1fdf03QqAAAAAElFTkSuQmCC"
                         alt="Red dot" /> Avidhan</span> সিলেক্ট করুন। ব্যস! পরবর্তী
                 ডেক্সটপ নোটিফিকেশনে আপনি
@@ -175,6 +197,64 @@
                 কাঙ্ক্ষিত ইংরেজী শব্দের বাংলা মানে পেয়ে যাবেন।</p>
         </div>
     </div>
+
+    <script>
+        function englishDesc() {
+            let desc = document.querySelector('#desc')
+            let englishDesc = document.querySelector('#englishDesc')
+            englishDesc.style.textDecoration = "underline"
+            englishDesc.style.fontWeight = "bold"
+            englishDesc.style.color = "#8C52FF"
+
+            // Remove the style
+            let banglaDesc = document.querySelector('#banglaDesc')
+            banglaDesc.style.textDecoration = ""
+            banglaDesc.style.fontWeight = ""
+            banglaDesc.style.color = ""
+
+            desc.innerHTML =
+                `<p><span class="galada">অভিধান</span> <span class="Lato" style="font-style: italic;">(Avidhan)</span> is an excellent Chrome extension to search the 
+            meaning of an English word in Bangla. With help of <span class="galada">অভিধান</span><span class="Lato"
+                style="font-style: italic;">(Avidhan)</span> you can do it in a few clicks from any
+            webpage inside your browser. There's no need to open a separate window.<br><br>Just double click on the English word you want to know meaning. Then 
+            right click and select <span style="background: #cdc7d4; padding: 0 5px; margin: 0;">
+                <img src="data:image/png;base64,
+                        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJHSURBVDhPnZNNSFRRFMd/771RpxmJLNMpsQ9HI0rHj0KjCGlVC1sEFSREiz7cSFQYhdROglq0cbJNSFALEVvkJgOLWhQtKtNxREILtUnDCfoYU+fjve697zWpq+zHu++9e885/3fOefdq9TU3rFx3GaaVZDnouovorxDa2doeqzhvP0nTsfwjLh1Gph+jm1aClIXIYHlDxZgJhI6NYcDsN5iT4/vfZ3xG2DSZMiR+QnLOCXBwyZshjOHQOMdvRYlOxdFEgEQXL7Mxk56gSTKWzeGWGSbeZRIb3Inhtn2UgMgGzcxk175NGKyWS4s4chL6BvqoDOxmODBCRwNkOgKqBEs00L/Fx7mjXRwqb6Ol+Q5fohEuNQYp13qpK2oXwZUM9Y9wuSbJqnUqVqEEZH3hwQ+0dp5mY5nBlWunyM8t4HqwkZa7PkqKAsr5zZMYe2u3klrwx5WA7Kovbz2jH9/z49NKUqK7kvDgMAdPlDLNSzWPhESnRdGWrNnBLkEs5Oa5edg2SfuzY2w2Wtmu3aa7q1857ThgFzzwdB5DCPxpskQ1UaJnQX+Hn+nmMcatC86qzfmmMyT4ijejUDV8ISoDSSolvrSnkKaKON333hL5PEbvg1GuNnQq+4tHU2wozBebR03TpAVkWvNxqKguIXS/ipt1a3kV9OO1ipkjwujrJFlex3kBaQGJFJFfcGdDQZGHFWvEfKKKi6UeJp+XY4gyl6Lreoa9VZcMcSl1jxAr3pZDds5iu729M9Dqq8Vx9ojjbP7PcQ7xG8de1fdf03QqAAAAAElFTkSuQmCC"
+                    alt="Red dot" /> Avidhan</span> from the context menu. Thats it. You will get the Bangla meaning in the next Chrome desktop notification.</p>`
+        }
+
+        function banglaDesc() {
+            let desc = document.querySelector('#desc')
+            let banglaDesc = document.querySelector('#banglaDesc')
+            banglaDesc.style.textDecoration = "underline"
+            banglaDesc.style.fontWeight = "bold"
+            banglaDesc.style.color = "#8C52FF"
+
+            // Remove the style
+            let englishDesc = document.querySelector('#englishDesc')
+            englishDesc.style.textDecoration = ""
+            englishDesc.style.fontWeight = ""
+            englishDesc.style.color = ""
+
+            desc.innerHTML =
+                `<p id="desc" class="baloo" style="text-align: justify; font-size: 19px;"><span
+                        class="galada">অভিধান</span>
+                    একটি
+                    অসাধারন ক্রোম এক্সটেনশন ইংরেজী শব্দের বাংলা মানের খোজার জন্য। আপনি মাত্র কয়েক ক্লিকেই যে কোন ওয়েব
+                    পেজ
+                    থেকে যে কোন ইংরেজী শব্দের বাংলা মানে বের করতে পারবেন। এর জন্য আপনাকে অন্য কোন পেজে গিয়ে মানে সার্চ
+                    করতে
+                    হবে না। <br><br> আপনি যে ইংরেজী শব্দের মানে জানতে চাচ্ছেন, সেই শব্দের উপর ডাবল ক্লিক করুন। এর পর
+                    মাউসে
+                    রাইট ক্লিক করে, কনটেক্সট মেনু থেকে <span style="background: #cdc7d4; padding: 0 5px; margin: 0;">
+                        <img src="data:image/png;base64,
+                        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJHSURBVDhPnZNNSFRRFMd/771RpxmJLNMpsQ9HI0rHj0KjCGlVC1sEFSREiz7cSFQYhdROglq0cbJNSFALEVvkJgOLWhQtKtNxREILtUnDCfoYU+fjve697zWpq+zHu++9e885/3fOefdq9TU3rFx3GaaVZDnouovorxDa2doeqzhvP0nTsfwjLh1Gph+jm1aClIXIYHlDxZgJhI6NYcDsN5iT4/vfZ3xG2DSZMiR+QnLOCXBwyZshjOHQOMdvRYlOxdFEgEQXL7Mxk56gSTKWzeGWGSbeZRIb3Inhtn2UgMgGzcxk175NGKyWS4s4chL6BvqoDOxmODBCRwNkOgKqBEs00L/Fx7mjXRwqb6Ol+Q5fohEuNQYp13qpK2oXwZUM9Y9wuSbJqnUqVqEEZH3hwQ+0dp5mY5nBlWunyM8t4HqwkZa7PkqKAsr5zZMYe2u3klrwx5WA7Kovbz2jH9/z49NKUqK7kvDgMAdPlDLNSzWPhESnRdGWrNnBLkEs5Oa5edg2SfuzY2w2Wtmu3aa7q1857ThgFzzwdB5DCPxpskQ1UaJnQX+Hn+nmMcatC86qzfmmMyT4ijejUDV8ISoDSSolvrSnkKaKON333hL5PEbvg1GuNnQq+4tHU2wozBebR03TpAVkWvNxqKguIXS/ipt1a3kV9OO1ipkjwujrJFlex3kBaQGJFJFfcGdDQZGHFWvEfKKKi6UeJp+XY4gyl6Lreoa9VZcMcSl1jxAr3pZDds5iu729M9Dqq8Vx9ojjbP7PcQ7xG8de1fdf03QqAAAAAElFTkSuQmCC"
+                            alt="Red dot" /> Avidhan</span> সিলেক্ট করুন। ব্যস! পরবর্তী
+                    ডেক্সটপ নোটিফিকেশনে আপনি
+                    আপনার
+                    কাঙ্ক্ষিত ইংরেজী শব্দের বাংলা মানে পেয়ে যাবেন।</p>`
+        }
+    </script>
 </body>
 
 </html>
